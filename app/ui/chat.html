@@ -1,0 +1,18 @@
+
+<div id="chat">
+    <form id="chat-f" hx-ext="ws" ws-connect="/chatroom"  hx-trigger="click" ws-send>
+        <input type="text" name="chat_text" id="chat-text"></input>
+        <button type="submit" id="chat-btn">send</button>
+    </form>
+    <div >
+        <div style="border:20px hidden #2eb9ce; background:none repeat 0 0 #f1eff5;" id="chat_room"></div>
+    </div>
+    <div>
+        <!-- <button 
+            hx-get="/back" 
+            hx-swap="outerHTML"
+            hx-target="#chat
+            >back
+        </button> -->
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x-chat</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <style>
+        .main_bg_1
+        {
+            background: linear-gradient(90deg, rgba(18, 1, 49, 0.97) 0%, rgba(5, 1, 35, 1) 22%, rgba(91, 70, 109, 1) 100%);
+        }
+        h1{
+            color: black;
+        }
+        .message{
+            color: black;
+        }
+        .text-area{
+            display: flex;
+            border: 1;
+            border-color: aquamarine;
+        }
+    </style>
+</head>
+<body class="main_bg">
+    <div id="body">
+        <h1>Welcome to x-chat!</h1>
+        <button type="submit" 
+            hx-get="/signin" 
+            hx-trigger="click" 
+            hx-swap="outerHTML"
+            hx-target="#body"
+            >
+            SignIn</button>
+        <button type="submit"
+            hx-get="/signup" 
+            hx-trigger="click" 
+            hx-swap="outerHTML"
+            hx-target="#body"
+        >SignUp</button>
+    </div>
+</body>
+</html>
